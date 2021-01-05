@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
+import {Link} from 'react-router-dom';
 
 import TitleImg from '../img/all_logo.png';
 import SweetLogo from '../img/sweetcase-img.gif';
 import BakhwaLogo from '../img/bakhwaproject-img.gif';
 
-import IconGithub from '../img/GitHub-Mark-Light-32px.png';
-import SoundCloudLogo from '../img/soundcloud-logo.gif';
-import TistoryLogo from '../img/tistory-logo.gif';
+import Footer from '../components/footer';
 
 import '../fonts/fonts.css'
 
@@ -136,45 +135,6 @@ const Home: React.FC = () => {
         margin-top: 100px;
     `
 
-    // Footer
-    const Footer = styled.div`
-        bottom: 0;
-        left: 0;
-
-        width: 99%;
-        height: 150px;
-
-        padding: 10px;
-
-        background-color: #0E6AC7;
-        color: white;
-
-        text-align: center;
-    `
-
-    // Materials In footer
-    const LinkIconsLayer = styled.div`
-        margin-top: 30px;
-        width: 100%;
-
-        margin-left: auto;
-        margin-right: auto;
-    `
-    const LinkIcon = styled.a`
-        float: left;
-        margin-right: 20px;
-    `
-
-    const LinkIconImg = styled.img`
-        width: 40px;
-        float: left;
-        
-    `
-    const CopyRight = styled.p`
-        clear: both;
-        bottom: 0;
-
-    `
     // Events
     /* Mouse Events in Button */
     const sweetCaseButtonMouseEnterEvent = () => {
@@ -217,16 +177,17 @@ const Home: React.FC = () => {
             <Line />
             <MainSection>
                 <ButtonLayer>
-                    <SweetCaseButton
+                    <Link to="/sweetcase"><SweetCaseButton
                         onMouseEnter={sweetCaseButtonMouseEnterEvent}
-                        onMouseLeave={sweetCaseButtonMouseLeaveEvent} >
+                        onMouseLeave={sweetCaseButtonMouseLeaveEvent} 
+                        >
                         SweetCase
-                    </SweetCaseButton>
-                    <BakhwaProjectButton
+                    </SweetCaseButton></Link>
+                    <Link to="/bakhwaproject"><BakhwaProjectButton
                         onMouseEnter={bakhwaButtonMouseEnterEvent}
                         onMouseLeave={bakhwaButtonMouseLeaveEvent} >
                         白花 PROJECT
-                    </BakhwaProjectButton>
+                    </BakhwaProjectButton></Link>
                 </ButtonLayer>
                 <DisplayLayer>
 
@@ -237,7 +198,7 @@ const Home: React.FC = () => {
                             <SinceText>since 2020</SinceText>
                             <ProjectSummary>
                                 <p>SOFTWARE PROJECT</p>
-                                <p>ANDROID/DOCKER-PACKAGE/WEB-APP/ANDROID</p>
+                                <p>ANDROID/DOCKER-PACKAGE/WEB-APP/IOT</p>
                             </ProjectSummary>
                         </SectionTextLayer>
                     </SweetcaseDisplayLayer>
@@ -256,19 +217,7 @@ const Home: React.FC = () => {
 
                 </DisplayLayer>
             </MainSection>
-
-            <Footer>
-
-                <LinkIconsLayer>
-                    <LinkIcon href="https://github.com/SweetCase-BakHwa-Project" target="_blank"><LinkIconImg src={IconGithub} /></LinkIcon>
-                    <LinkIcon href="https://soundcloud.com/dj4zokfdkjb5" target="_blank"><LinkIconImg src={SoundCloudLogo} /></LinkIcon>
-                    <LinkIcon href="https://sweetcase.tistory.com/" target="_blank"><LinkIconImg src={TistoryLogo} /></LinkIcon>
-
-                </LinkIconsLayer>
-                
-                <CopyRight>Copyright 2015, 2019 2020. SweetCase, 白花 Project. All rights Reserved.</CopyRight>
-            </Footer>
-
+            <Footer />
         </Main>
     );
     
