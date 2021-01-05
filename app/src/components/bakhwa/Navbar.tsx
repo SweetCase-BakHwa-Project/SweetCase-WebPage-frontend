@@ -21,16 +21,19 @@ const Navbar: React.FC<{
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/bakhwaproject"><NavTitle>白化 Project</NavTitle></a>
-                <div className="collapse navbar-collapse" id="navbarText">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className={album} aria-current="page" href="/bakhwaproject/albums">Albums</a>
+                        <a className={album} href="/bakhwaproject/albums">Albums</a>
                         </li>
                         <li className="nav-item">
-                            <a className={musicSheet} href="/">MusicSheets</a>
+                            <a className={musicSheet} href="/bakhwaproject/musicsheets">MusicSheets</a>
                         </li>
                         <li className="nav-item">
-                            <a className={about} href="#">About</a>
+                            <a className={about} href="/bakhwaproject/about">About</a>
                         </li>
                     </ul>
                 </div>

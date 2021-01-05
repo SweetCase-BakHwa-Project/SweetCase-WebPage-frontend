@@ -52,7 +52,7 @@ const Footer: React.FC<{backgroundcolor:string}> = ({backgroundcolor}) => {
 
             </LinkIconsLayer>
                 
-            <CopyRight>Copyright 2015, 2020, 2021. SweetCase, 白花 Project. All rights Reserved.</CopyRight>
+            <CopyRight>Copyright. 2015, 2019, 2021. 白花 Project. SweetCase Project, SweetCase Words. All rights Reserved.</CopyRight>
         </FooterLayer>
     );
 }

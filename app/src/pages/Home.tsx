@@ -195,7 +195,7 @@ const Home: React.FC = () => {
                         <SectionImg src={displayImg} />
                         <SectionTextLayer>
                             <ProjectTitle>SweetCase Project</ProjectTitle>
-                            <SinceText>since 2020</SinceText>
+                            <SinceText>since 2019</SinceText>
                             <ProjectSummary>
                                 <p>SOFTWARE PROJECT</p>
                                 <p>ANDROID/DOCKER-PACKAGE/WEB-APP/IOT</p>

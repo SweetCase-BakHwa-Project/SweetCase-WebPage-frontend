@@ -35,7 +35,7 @@ const BakhwaProject: React.FC = () => {
                 <NoneOpacityWallpaperLayer>
                     <WallpaperTitle>白花 PROJECT</WallpaperTitle>
                     <WallpaperLine />
-                    <WallpaperSince>since 2016</WallpaperSince>
+                    <WallpaperSince>since 2015</WallpaperSince>
                     <WallpaperSummary>
                         <WallpaperText>
                             We Wish Make Pure Music <br></br>

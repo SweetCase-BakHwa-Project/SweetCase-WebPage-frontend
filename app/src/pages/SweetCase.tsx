@@ -46,7 +46,7 @@ const SweetCase: React.FC = () => {
             </nav>
             <WallpaperLayer>
                 <WallpaperTitle>SweetCase Project</WallpaperTitle>
-                <WallpaperSince>since 2020</WallpaperSince>
+                <WallpaperSince>since 2019</WallpaperSince>
             </WallpaperLayer>
             <Footer backgroundcolor="#0E6AC7" />
         </Main>
