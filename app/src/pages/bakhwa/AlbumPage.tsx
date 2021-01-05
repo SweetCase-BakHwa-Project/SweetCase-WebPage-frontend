@@ -31,7 +31,7 @@ const AlbumPage: React.FC = () => {
                     <ListLayerLine />
                     <AlbumList>
                         <Album albumName="White Canna" createDate="2021/01/21" albumImgUrl={WhiteCanna} />
-                        <Album albumName="Nightude Ep.2 1/2 - SweetCase Diary" createDate="2019/08/19" albumImgUrl="https://i1.sndcdn.com/artworks-000584386847-mbaigo-t500x500.jpg"/>
+                        <Album albumName="Nightude Ep.2 1-2 - SweetCase Diary" createDate="2019/08/19" albumImgUrl="https://i1.sndcdn.com/artworks-000584386847-mbaigo-t500x500.jpg"/>
                         <Album albumName="Nightude Ep.1.5 - Another Worlds" createDate="2018/08/05" albumImgUrl="https://i1.sndcdn.com/artworks-000384470454-x7m52d-t500x500.jpg"/>
                         <Album albumName="Nightude Ep.1 - New Worlds" createDate="2018/05/12" albumImgUrl="https://i1.sndcdn.com/artworks-000347215173-dms54z-t500x500.jpg"/>
                     </AlbumList>

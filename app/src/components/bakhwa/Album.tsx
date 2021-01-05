@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Album: React.FC<{
     albumName: string,
@@ -19,13 +20,14 @@ const Album: React.FC<{
         box-shadow: 5px 2px 2px gray;
     `
     var displayedAlbumName = albumName;
+    const targetUrl: string = "/bakhwaproject/albums/info/"+albumName;
     if(albumName.length > 40) {
         displayedAlbumName  = displayedAlbumName.slice(0, 35) + "...";
     }
     return (
         <Body>
             <InBody>
-                <AlbumImage src={albumImgUrl}/>
+                <Link to={targetUrl} ><AlbumImage src={albumImgUrl}/></Link>
                 <Line />
                 <AlbumTitle>{displayedAlbumName}</AlbumTitle>
                 <AlbumDate>{createDate}</AlbumDate>
