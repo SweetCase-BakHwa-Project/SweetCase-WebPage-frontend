@@ -7,17 +7,17 @@ import IconGithub from '../img/GitHub-Mark-Light-32px.png';
 import SoundCloudLogo from '../img/soundcloud-logo.gif';
 import TistoryLogo from '../img/tistory-logo.gif';
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{backgroundcolor:string}> = ({backgroundcolor}) => {
     const FooterLayer = styled.div`
         bottom: 0;
         left: 0;
 
-        width: 99%;
+        width: 100%;
         height: 150px;
 
         padding: 10px;
 
-        background-color: #0E6AC7;
+        background-color: ${backgroundcolor};
         color: white;
 
         text-align: center;

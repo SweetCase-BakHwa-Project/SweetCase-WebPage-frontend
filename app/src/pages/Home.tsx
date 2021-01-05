@@ -130,7 +130,7 @@ const Home: React.FC = () => {
     const SinceText = styled.p`
         margin-top: -30px;
     `
-    const ProjectSummary = styled.p`
+    const ProjectSummary = styled.div`
         font-size: 25px;
         margin-top: 100px;
     `
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
 
                 </DisplayLayer>
             </MainSection>
-            <Footer />
+            <Footer backgroundcolor="#0E6AC7" />
         </Main>
     );
     
