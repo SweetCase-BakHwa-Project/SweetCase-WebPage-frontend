@@ -10,12 +10,10 @@ const NavTitle = styled.div`
 `
 const Navbar: React.FC<{
     album: string,
-    musicSheet: string,
-    about: string
+    musicSheet: string
 }> = ({
     album,
-    musicSheet,
-    about
+    musicSheet
 }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,9 +29,6 @@ const Navbar: React.FC<{
                         </li>
                         <li className="nav-item">
                             <a className={musicSheet} href="/bakhwaproject/musicsheets">MusicSheets</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className={about} href="/bakhwaproject/about">About</a>
                         </li>
                     </ul>
                 </div>

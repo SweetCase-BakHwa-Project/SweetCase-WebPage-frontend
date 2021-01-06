@@ -20,7 +20,6 @@ const AlbumPage: React.FC = () => {
             <Navbar 
                 album="nav-link active"
                 musicSheet="nav-link"
-                about="nav-link" 
             />
             <Body>
                 <TitleText>Albums</TitleText>
@@ -44,7 +43,6 @@ const AlbumPage: React.FC = () => {
                         <Album albumName="Pure Heart(純白)" createDate="2018/12/30" albumImgUrl="https://i1.sndcdn.com/artworks-000465365424-utzyh5-t500x500.jpg"/>
                         <Album albumName="新世界 Part.2 (New Worlds)" createDate="2015/06/01" albumImgUrl="https://i1.sndcdn.com/artworks-000392325441-mcr7x2-t500x500.jpg"/>
                         <Album albumName="Wish On The Wind" createDate="2015/06/01" albumImgUrl="https://i1.sndcdn.com/avatars-000748817248-oc4a3k-t500x500.jpg"/>
-                        
                     </AlbumList>
                 </ListLayer>
             </Body>

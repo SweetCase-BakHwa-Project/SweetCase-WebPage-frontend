@@ -29,7 +29,6 @@ const BakhwaProject: React.FC = () => {
             <Navbar
                 album="nav-link"
                 musicSheet="nav-link"
-                about="nav-link" 
             />
             <WallpaperLayer>
                 <NoneOpacityWallpaperLayer>

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import IconGithub from '../img/GitHub-Mark-Light-32px.png';
 import SoundCloudLogo from '../img/soundcloud-logo.gif';
 import TistoryLogo from '../img/tistory-logo.gif';
+import EmailLogo from '../img/email-icon.gif';
 
 const Footer: React.FC<{backgroundcolor:string}> = ({backgroundcolor}) => {
     const FooterLayer = styled.div`
@@ -49,6 +50,7 @@ const Footer: React.FC<{backgroundcolor:string}> = ({backgroundcolor}) => {
                 <LinkIcon href="https://github.com/SweetCase-BakHwa-Project" target="_blank"><LinkIconImg src={IconGithub} /></LinkIcon>
                 <LinkIcon href="https://soundcloud.com/dj4zokfdkjb5" target="_blank"><LinkIconImg src={SoundCloudLogo} /></LinkIcon>
                 <LinkIcon href="https://sweetcase.tistory.com/" target="_blank"><LinkIconImg src={TistoryLogo} /></LinkIcon>
+                <LinkIcon href="mailto:seokbong60@gmail.com"><LinkIconImg src={EmailLogo} /></LinkIcon>
 
             </LinkIconsLayer>
                 
