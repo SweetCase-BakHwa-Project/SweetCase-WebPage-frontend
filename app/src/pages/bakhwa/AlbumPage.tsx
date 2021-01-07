@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
@@ -8,9 +8,55 @@ import Album from "../../components/bakhwa/Album";
 import Footer from '../../components/footer';
 
 import Wallpaper from "../../img/bakhwa-wallpaper.jpg";
-import WhiteCanna from "../../img/album-cover.png";
+
+import axios from "axios";
+
+import HostData from "../../config.json";
 
 const AlbumPage: React.FC = () => {
+
+    var [epAlbumList, setEpAlbumList] = useState<JSX.Element[]>();
+    var [singleAlbumList, setSingleAlbumList] = useState<JSX.Element[]>();
+
+    // Get Data
+    if(epAlbumList === undefined) {
+        axios.post(HostData.bakhwaHost.host+HostData.bakhwaHost.api.get_album_summary_list, {
+            "type": "EP"
+        }).then(data => {
+            var albumComponentList = [];
+            var _albumList = data.data.data;
+            for(var i = 0; i < _albumList.length; i++) {
+                albumComponentList.push(
+                    <Album albumName={_albumList[i].album_name} 
+                        createDate={_albumList[i].create_date} 
+                        albumImgUrl={_albumList[i].album_cover}
+                        key={i} />
+                );
+            }
+            setEpAlbumList(albumComponentList);
+        }).catch(e => {
+            setEpAlbumList([<h1>Server Disconnected</h1>]);
+        })
+    }
+    if(singleAlbumList === undefined) {
+        axios.post(HostData.bakhwaHost.host+HostData.bakhwaHost.api.get_album_summary_list, {
+            "type": "Single"
+        }).then(data => {
+            var albumComponentList = [];
+            var _albumList = data.data.data;
+            for(var i = 0; i < _albumList.length; i++) {
+                albumComponentList.push(
+                    <Album albumName={_albumList[i].album_name} 
+                        createDate={_albumList[i].create_date} 
+                        albumImgUrl={_albumList[i].album_cover}
+                        key={i} />
+                );
+            }
+            setSingleAlbumList(albumComponentList);
+        }).catch(e => {
+            setSingleAlbumList([<h1>Server Disconnected</h1>]);
+        })
+    }
 
     return (
         <Main>
@@ -29,10 +75,7 @@ const AlbumPage: React.FC = () => {
                     <ListLayerTitle>EP Album</ListLayerTitle>
                     <ListLayerLine />
                     <AlbumList>
-                        <Album albumName="White Canna" createDate="2021/01/21" albumImgUrl={WhiteCanna} />
-                        <Album albumName="Nightude Ep.2 1-2 - SweetCase Diary" createDate="2019/08/19" albumImgUrl="https://i1.sndcdn.com/artworks-000584386847-mbaigo-t500x500.jpg"/>
-                        <Album albumName="Nightude Ep.1.5 - Another Worlds" createDate="2018/08/05" albumImgUrl="https://i1.sndcdn.com/artworks-000384470454-x7m52d-t500x500.jpg"/>
-                        <Album albumName="Nightude Ep.1 - New Worlds" createDate="2018/05/12" albumImgUrl="https://i1.sndcdn.com/artworks-000347215173-dms54z-t500x500.jpg"/>
+                        {epAlbumList}
                     </AlbumList>
                 </ListLayer>
                 <ListEmpty />
@@ -40,9 +83,7 @@ const AlbumPage: React.FC = () => {
                     <ListLayerTitle>Single Album</ListLayerTitle>
                     <ListLayerLine />
                     <AlbumList>
-                        <Album albumName="Pure Heart(純白)" createDate="2018/12/30" albumImgUrl="https://i1.sndcdn.com/artworks-000465365424-utzyh5-t500x500.jpg"/>
-                        <Album albumName="新世界 Part.2 (New Worlds)" createDate="2015/06/01" albumImgUrl="https://i1.sndcdn.com/artworks-000392325441-mcr7x2-t500x500.jpg"/>
-                        <Album albumName="Wish On The Wind" createDate="2015/06/01" albumImgUrl="https://i1.sndcdn.com/avatars-000748817248-oc4a3k-t500x500.jpg"/>
+                        {singleAlbumList}
                     </AlbumList>
                 </ListLayer>
             </Body>

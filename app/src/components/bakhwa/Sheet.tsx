@@ -1,16 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const Sheet: React.FC<{
     sheetName: string,
     createDate: string,
-}> = ({ sheetName, createDate}) => {
+    link: string
+}> = ({ sheetName, createDate, link}) => {
     return (
         <Body>
             <Title>{sheetName}</Title>
             <DateText>{createDate}</DateText>
-            <DownloadDiv><button type="button" className="btn btn-dark">Download</button></DownloadDiv>
+            <DownloadDiv><button type="button" className="btn btn-dark" onClick={() => {
+                window.open(
+                    link, "_blank"
+                );
+            }}>Download</button></DownloadDiv>
         </Body>
     );
 }

@@ -6,8 +6,9 @@ import 'react-h5-audio-player/lib/styles.css';
 
 const TrackSong: React.FC<{
     trackNumber: number,
-    musicName: string
-}> = ({ trackNumber, musicName }) => {
+    musicName: string,
+    musicUrl: string
+}> = ({ trackNumber, musicName, musicUrl }) => {
 
     const [isAudioPlayVisible, setIsAudioPlayVisible] = useState({display: "none", playButtonClassNames: "btn btn-primary"});
 
@@ -15,7 +16,6 @@ const TrackSong: React.FC<{
     const AudioLayer = styled.div`
         display: ${isAudioPlayVisible.display};
     `
-    const musicUrl = "https://sweetcase-webpage.s3.ap-northeast-2.amazonaws.com/Wish+On+The+Wind(Prelude+Mix).mp3";
     // When Click PlayButton
     const playBtnEvent = () => {
         if(isAudioPlayVisible.display === "none") {
@@ -38,7 +38,6 @@ const TrackSong: React.FC<{
                 <Title>{musicName}</Title>
                 <ButtonLayer>
                     <ButtonDiv><button type="button" className={isAudioPlayVisible.playButtonClassNames} onClick={playBtnEvent}>Play</button></ButtonDiv>
-                    <ButtonDiv><button type="button" className="btn btn-dark">Download</button></ButtonDiv>
                 </ButtonLayer>
             </SummaryLayer>
             <AudioLayer><AudioPlayer src={musicUrl} /></AudioLayer>

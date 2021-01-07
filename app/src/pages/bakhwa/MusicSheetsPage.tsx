@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Helmet} from 'react-helmet';
 import styled from 'styled-components';
 
@@ -9,10 +9,40 @@ import Sheet from "../../components/bakhwa/Sheet";
 
 import Wallpaper from "../../img/bakhwa-wallpaper.jpg";
 
+import HostData from "../../config.json";
+
+import axios from 'axios';
+
+class MusicSheetInfoClass {
+    sheetComponents:        JSX.Element[]
+    constructor(sheetComponents:    JSX.Element[]) {
+        this.sheetComponents = sheetComponents;
+    }
+}
+
 const MusicSheets: React.FC = () => {
 
-    var examplePdfUrl = "example.pdf";
-    var pageNumber = 1;
+    const [musicSheetList, setMusicSheetList] = useState<MusicSheetInfoClass>();
+
+    if(musicSheetList === undefined) {
+        axios.post(HostData.bakhwaHost.host+HostData.bakhwaHost.api.get_musichseet_list)
+        .then(data => {
+            var musicSheetComponentList: JSX.Element[] = [];
+            var _musicSheetList = data.data.data;
+            for(var i = 0; i < _musicSheetList.length; i++) {
+                musicSheetComponentList.push(
+                    <Sheet sheetName={_musicSheetList[i].name} 
+                            createDate={_musicSheetList[i].create_date} 
+                            key={i} 
+                            link={_musicSheetList[i].link} />
+                );
+            }
+            setMusicSheetList(new MusicSheetInfoClass(musicSheetComponentList));
+        }).catch((e) => {
+            setMusicSheetList(new MusicSheetInfoClass([<h1>Server Disconnected</h1>]));
+        });
+    }
+
     return (
         <Main>
             <Helmet>
@@ -28,8 +58,7 @@ const MusicSheets: React.FC = () => {
                 <SubTitleText>여기 있는 모든 악보들은 무료입니다.</SubTitleText>
                 <ListEmpty />
                 <MusicSheetLayer>
-                    <Sheet sheetName="Tragic Waltz" createDate="2018/05/12" />
-                    <Sheet sheetName="新世界(신세계) Part.1 (UnkNoWn WoRldS)" createDate="2018/05/12" />
+                    {musicSheetList?.sheetComponents}
                 </MusicSheetLayer>
             </Body>
             <Footer backgroundcolor="#000000" />

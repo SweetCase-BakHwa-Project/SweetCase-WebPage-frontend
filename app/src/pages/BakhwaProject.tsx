@@ -9,8 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '../fonts/fonts.css'
 
 import Wallpaper from "../img/bakhwa-wallpaper.jpg"
-
-
 const BakhwaProject: React.FC = () => {
 
     const WallpaperLayer = styled.div`
@@ -20,7 +18,6 @@ const BakhwaProject: React.FC = () => {
         width: 100%;
         height: 70vh;
     `
-
     return (
         <Main>
             <Helmet>
