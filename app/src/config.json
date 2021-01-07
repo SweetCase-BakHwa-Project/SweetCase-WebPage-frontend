@@ -1,6 +1,6 @@
 {
     "bakhwaHost": {
-        "host": "http://sweetcase:9000/",
+        "host": "http://sweetcase.tk:9000/",
         "api": {
             "get_album_summary_list": "get_album_summary_list",
             "get_album_info": "get_album_info",
@@ -8,5 +8,5 @@
             "get_musichseet_list": "get_musicsheet_list"
         }
     },
-    "sweetHost": "http://sweetcase:9001"
+    "sweetHost": "http://sweetcase.tk:9001"
 }
