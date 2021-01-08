@@ -27,4 +27,5 @@ SweetCase는 크게 SweetCase Project(IT)와 白花 PROJECT(Music)로 세분화 
     * 초기 화면에 하이라이트 앨범 및 최신 앨범 보여주기
 * 기능 개션
     * 특정 해상도 및 모바일 환경에서도 장상적으로 보일 수 있게 개선 (Web App 형태로 변경)
+        * 부트스트랩을 이용해 구현한 SweetCase의 네비바는 모바일 환경에서 전혀 작동하지 않음
     * SweetCase Project의 하단에 랜덤 라디오를 구현하여 白花 Project에 있는 곡들을 랜덤으로 재생
