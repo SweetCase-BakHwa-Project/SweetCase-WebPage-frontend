@@ -6,7 +6,6 @@ Team SweetCase Web Site (FrontEnd)
 ![bootstrap](https://img.shields.io/badge/bootstrap-4.5.3-blueviolet?style=flat-square)
 
 ## Sites
-**현재 Backend부분을 Spring으로 변경하는 중에 있어 서버가 닫힌 상태 입니다**<br>
 [sweetcase.tk](http://sweetcase.tk)<br>
 * [白花 PROJECT](http://sweetcase.tk/bakhwaproject)<br>
 * [SweetCase Project(미구현)](http://sweetcase.tk/sweetcase)<br>
@@ -23,6 +22,7 @@ SweetCase는 크게 SweetCase Project(IT)와 白花 PROJECT(Music)로 세분화 
     * 초기 화면만 구현
 
 ## 구현해야 할 부분
+* **Backend Engine을 Flask에서 Spring Boot으로 변경 예정**
 * **SweetCase Project** 기획
 * 白花 PROJECT
     * 초기 화면에 하이라이트 앨범 및 최신 앨범 보여주기
