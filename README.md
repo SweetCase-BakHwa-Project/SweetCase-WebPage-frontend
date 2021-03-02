@@ -7,6 +7,7 @@ Team SweetCase Web Site (FrontEnd)<br>
 ![bootstrap](https://img.shields.io/badge/bootstrap-4.5.3-blueviolet?style=flat-square)
 
 ## Sites
+* **리모델링 중입니다**<br>
 [sweetcase.tk](http://sweetcase.tk)<br>
 * [白花 PROJECT](http://sweetcase.tk/bakhwaproject)<br>
 * [SweetCase Project(미구현)](http://sweetcase.tk/sweetcase)<br>
