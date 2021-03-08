@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
-import {Link} from 'react-router-dom';
+
+import MainNavbar from "../components/navbar/MainNavbar";
 
 const Main = styled.div`
     width: 100%;
@@ -14,6 +15,9 @@ const PageHome: React.FC = () => {
             <Helmet>
                 <title>SWEETCASE</title>
             </Helmet>
+
+            <MainNavbar />
+
         </Main>
     );
 }
