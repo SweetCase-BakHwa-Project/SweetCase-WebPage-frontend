@@ -1,12 +1,6 @@
 {
-    "bakhwaHost": {
-        "host": "http://sweetcase.tk:9000/",
-        "api": {
-            "get_album_summary_list": "get_album_summary_list",
-            "get_album_info": "get_album_info",
-
-            "get_musichseet_list": "get_musicsheet_list"
-        }
-    },
-    "sweetHost": "http://sweetcase.tk:9001"
+    "colors": {
+        "main-color": "#6E226C",
+        "shallow-color": "#FA97F4"
+    }
 }
