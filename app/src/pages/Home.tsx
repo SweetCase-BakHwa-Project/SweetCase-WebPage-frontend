@@ -24,14 +24,6 @@ const PageHome: React.FC = () => {
                 <div>
                     <TitleImgInPC src={MainTitleImg}/>
                     <MainLayoutInPC>
-                        <BakhwaProjectLayoutInPC>
-                            <BakhwaProjectTitleText>白花 PROJECT</BakhwaProjectTitleText>
-                            <MainMiddleLine />
-                        </BakhwaProjectLayoutInPC>
-                        <BlackLineProjectLayoutInPC>
-                            <BlackLineProjectTitle>BLACKLINE</BlackLineProjectTitle>
-                            <MainMiddleLine />
-                        </BlackLineProjectLayoutInPC>
                     </MainLayoutInPC>
                 </div>
                 
@@ -41,35 +33,12 @@ const PageHome: React.FC = () => {
                 <div>
                     <TitleImgInMobile src={MainTitleImg}/>
                     <MainLayoutInMobile>
-                        <BakhwaProjectLayoutInMobile>
-                            <BakhwaProjectTitleText>白花 PROJECT</BakhwaProjectTitleText>
-                            <MainMiddleLine />
-                        </BakhwaProjectLayoutInMobile>
-                        <BlackLineProjectLayoutInMobile>
-                            <BlackLineProjectTitle>BLACKLINE</BlackLineProjectTitle>
-                            <MainMiddleLine />
-                        </BlackLineProjectLayoutInMobile>
                     </MainLayoutInMobile>
                 </div>
             }
         </Main>
     );
 }
-
-
-// ALL PC And Mobile
-const BlackLineProjectTitle = styled.h1`
-    font-family: 'Android_101';
-`
-const BakhwaProjectTitleText = styled.h1`
-    font-family: 'Nanum Myeongjo', serif;
-`
-const MainMiddleLine = styled.div`
-    margin: 10px;
-    height: 1px;
-    width: 90%;
-    background-color: ${config.colors['shallow-color']};
-`
 
 
 // PC EDITION
@@ -89,11 +58,6 @@ const MainLayoutInPC = styled.div`
 
     position: absolute;
 `
-const BakhwaProjectLayoutInPC = styled.div`
-`
-const BlackLineProjectLayoutInPC = styled.div`
-`
-
 // MOBILE EDITION
 const TitleImgInMobile = styled.img`
     width: 300px;
@@ -110,10 +74,6 @@ const MainLayoutInMobile = styled.div`
     width: 90%;
 
     position: absolute;
-`
-const BakhwaProjectLayoutInMobile = styled.div`
-`
-const BlackLineProjectLayoutInMobile = styled.div`
 `
 
 export default PageHome;
