@@ -1,6 +1,17 @@
 {
     "colors": {
-        "main-color": "#F25C05",
-        "shallow-color": "#F0811E"
+        "cobalto": {
+            "main": "#1867B0",
+            "dark": "#0F427C",
+            "flated": "#BACEE5"
+        },
+        "bakhwa": {
+            "main": "#7C1D3A",
+            "dark": "#7C1D3A",
+            "flated": "#EEE6E8"
+        },
+        "box": {
+            "main": "#F0811A"
+        }
     }
 }
